@@ -26,7 +26,7 @@ type SerpQuery struct {
 type SerpResponse map[string]interface{}
 
 // Create a new query
-func newGoogleSearch(parameter map[string]string) SerpQuery {
+func NewGoogleSearch(parameter map[string]string) SerpQuery {
 	if len(serpApiKey) > 0 {
 		parameter[SERP_API_KEY] = serpApiKey
 	}
