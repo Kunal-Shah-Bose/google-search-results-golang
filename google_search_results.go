@@ -57,12 +57,12 @@ func (sq *SerpQuery) execute(output string) *http.Response {
 }
 
 // return go struct by processing the json returned by the server
-func (sq *SerpQuery) json() (SerpResponse, error) {
+func (sq *SerpQuery) Json() (SerpResponse, error) {
 	rsp := sq.execute("json")
 	return sq.decodeJson(rsp.Body)
 }
 
-func (sq *SerpQuery) jsonWithImages() (SerpResponse, error) {
+func (sq *SerpQuery) JsonWithImages() (SerpResponse, error) {
 	rsp := sq.execute("json_with_images")
 	return sq.decodeJson(rsp.Body)
 }
